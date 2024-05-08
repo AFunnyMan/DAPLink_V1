@@ -29,17 +29,17 @@
 COMPILER_ASSERT(DAPLINK_HIC_ID == DAPLINK_HIC_ID_STM32F103XB);
 
 //USB control pin
-#define USB_CONNECT_PORT_ENABLE()    __HAL_RCC_GPIOA_CLK_ENABLE()
-#define USB_CONNECT_PORT_DISABLE()   __HAL_RCC_GPIOA_CLK_DISABLE()
-#define USB_CONNECT_PORT             GPIOA
+#define USB_CONNECT_PORT_ENABLE()    __HAL_RCC_GPIOB_CLK_ENABLE()
+#define USB_CONNECT_PORT_DISABLE()   __HAL_RCC_GPIOB_CLK_DISABLE()
+#define USB_CONNECT_PORT             GPIOB
 #define USB_CONNECT_PIN              GPIO_PIN_15
 #define USB_CONNECT_ON()             (USB_CONNECT_PORT->BSRR = USB_CONNECT_PIN)
 #define USB_CONNECT_OFF()            (USB_CONNECT_PORT->BRR  = USB_CONNECT_PIN)
 
 //Connected LED
 #define CONNECTED_LED_PORT           GPIOB
-#define CONNECTED_LED_PIN            GPIO_PIN_6
-#define CONNECTED_LED_PIN_Bit        6
+#define CONNECTED_LED_PIN            GPIO_PIN_4
+#define CONNECTED_LED_PIN_Bit        4
 
 //When bootloader, disable the target port(not used)
 #define POWER_EN_PIN_PORT            GPIOB
@@ -66,21 +66,21 @@ COMPILER_ASSERT(DAPLINK_HIC_ID == DAPLINK_HIC_ID_STM32F103XB);
 
 //LEDs
 //USB status LED
-#define RUNNING_LED_PORT             GPIOA
-#define RUNNING_LED_PIN              GPIO_PIN_9
-#define RUNNING_LED_Bit              9
+#define RUNNING_LED_PORT             GPIOB
+#define RUNNING_LED_PIN              GPIO_PIN_3
+#define RUNNING_LED_Bit              3
 
-#define PIN_HID_LED_PORT             GPIOA
-#define PIN_HID_LED                  GPIO_PIN_9
-#define PIN_HID_LED_Bit              9
+#define PIN_HID_LED_PORT             GPIOB
+#define PIN_HID_LED                  GPIO_PIN_3
+#define PIN_HID_LED_Bit              3
 
-#define PIN_CDC_LED_PORT             GPIOA
-#define PIN_CDC_LED                  GPIO_PIN_9
-#define PIN_CDC_LED_Bit              9
+#define PIN_CDC_LED_PORT             GPIOB
+#define PIN_CDC_LED                  GPIO_PIN_3
+#define PIN_CDC_LED_Bit              3
 
-#define PIN_MSC_LED_PORT             GPIOA
-#define PIN_MSC_LED                  GPIO_PIN_9
-#define PIN_MSC_LED_Bit              9
+#define PIN_MSC_LED_PORT             GPIOB
+#define PIN_MSC_LED                  GPIO_PIN_3
+#define PIN_MSC_LED_Bit              3
 
 
 #endif
